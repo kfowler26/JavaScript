@@ -1,0 +1,71 @@
+/*
+Author: Kendall Fowler
+Date: 27-FEB-2021
+CIS 2286 Assignment 3
+*/
+
+#container {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid green;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+#outputDiv {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid green;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+h4, h3, h6 {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.btn {
+    font-weight: bold;
+}
+
+.btn-sm {
+    margin-top: 3px;
+}
+
+/*
+Name: jdkitson
+Date: 02/10/2019
+Date Updated: 02/17/2020
+Purpose: CIS-2286 Week7 class 1 Activity StyleSheet
+*/
+.errorStyle {
+    background-color: red;
+    padding: 1px;
+    border: 1px solid;
+    color: white;
+    /* this hides it by default - only show if there is an error */
+    display: none;
+    border-radius: 3px;
+}
+

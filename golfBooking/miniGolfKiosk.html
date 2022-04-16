@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+#####################################
+    Author: Kendall Fowler
+    Date: 04-04-2021
+    Purpose: CIS 2286 Assignment 5
+####################################
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Jillian's Putt Putt Par-Tee</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="processOrder.js"></script>
+    <!--Date Picker Links and Scripts
+    Code Sourced from https://jqueryui.com/datepicker/
+    -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<noscript>
+    "You don't have Javascript turned on! In order for this page to function properly you must turn on Javascript."
+</noscript>
+</head>
+<body>
+<div class="container-fluid" id="container">
+    <div class="container-fluid" id="headerArea">
+        <div class="row">
+            <div class="col-md-4">
+                <!--image sourced from http://clipart-library.com/clipart/ki8okaj8T.htm -->
+                <img src="images/miniGolf.png" alt="Golfing Logo" class="center">
+            </div>
+            <div class="col-md-8">
+                <div class="well">
+                    <br>
+                    <br>
+                    <br>
+                    <h1>Jillian's Putt Putt Par-Tee</h1>
+                    <h3>Point of Sale System</h3>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="widgetArea">
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <p>Select Date: <input type="text" id="datePicker"></p>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid" id="leftArea">
+        <div class="row">
+            <form id="myForm" action="/action_page.php">
+                <div class="col-md-12">
+                    <fieldset>
+                        <legend>Players</legend>
+                        <a href="#" title="(13 and older)">Adults</a>
+                        <select id="adults">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select> $4 each<br><br>
+                        <a href="#" title="(12 and under)">Children</a>
+                        <select id="children">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select> $2 each<br><br>
+                    </fieldset>
+                </div>
+                <div class="col-md-12">
+                    <fieldset>
+                        <legend>Discounts</legend>
+                        <input type="radio" id="caa" name="discountGroup" value="CAA"/>
+                        CAA
+                        (10%)<br>
+                        <input type="radio" id="mil" name="discountGroup" value="Military"/>
+                        Military
+                        (25%)<br>
+                        <input type="radio" id="fun" name="discountGroup" value="Fun Club Member"/>
+                        FunClub Member (50%)<br>
+                    </fieldset>
+                </div>
+            </form>
+            <br>
+            <br>
+            <div class="col-md-12">
+                <button id="resetButton" type="button" class="btn btn-danger">Reset Form</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="totalArea">
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>Totals</legend>
+                    Number of Adults: <input type="text" id="numAdults" readonly="readonly"/> <span
+                        id="totalAdultsDiv"></span><br>
+                    Number of Children: <input type="text" id="numChildren" readonly="readonly"/> <span
+                        id="totalChildrenDiv"></span><br><br>
+                    Net Amount: <span id="totalBeforeTaxDiv"></span><br><br>
+                    Gross Amount (including 10% tax): <span id="totalAfterTaxDiv"></span><br><br>
+                    <button type="button" id="changeButton" class="btn btn-info">CALCULATE CHANGE</button>
+                    <br><br>
+                    <div id="changeOutput">
+                        You owe the customer: <span id="changeDue">.</span>
+                    </div>
+                    <hr>
+                    Discounts Applied:<br>
+                    <span id="discountString"></span>
+                </fieldset>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

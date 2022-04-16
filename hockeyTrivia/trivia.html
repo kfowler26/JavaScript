@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+#####################################
+    Author: Kendall Fowler
+    Date: 11-MAR-2021
+    CIS 2286 Assignment 4
+    Dependencies: None
+####################################
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hockey Trivia</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<div id=container>
+    <div class="well-sm">
+        <h1>Hockey Trivia</h1>
+        <!-- img sourced from: https://www.fg-a.com/sports-clipart-3.shtml -->
+        <img src="images/slapShot.gif" alt="Paris" class="center">
+        <h3>From someone who doesn't know much about hockey.</h3>
+        <h4><br>Enter your answers below.<br><br>Press Submit Answers to see your score!</h4>
+    </div>
+    <form id="myForm" action="/action_page.php">
+        <div class="form-group">
+            <label for="questionOne">1) What year did Toronto Maple Leafs win the Stanley Cup?</label>
+            <br>
+            <input type="text" class="form-control" id="questionOne"/>
+            <span id="questionOneError" class="errorStyle">Numeric entry is required.<br></span>
+            <button type="button" class="btn btn-primary btn-sm" id="questionOneButton">Hint</button>
+        </div>
+        <div class="form-group">
+            <label for="questionTwo">2) How many Canadian NHL Teams are there in the 2020-21 Season?</label>
+            <input type="text" class="form-control" id="questionTwo"/>
+            <span id="questionTwoError" class="errorStyle">Numeric entry is required.<br></span>
+            <button type="button" class="btn btn-primary btn-sm" id="questionTwoButton">Hint</button>
+        </div>
+        <div class="form-group">
+            <label for="questionThree">3) What player was 5th overall in the 1st round of the 1990 NHL Draft and
+                went on to play for
+                the Pittsburgh Penguins? </label>
+            <select class="form-control" id="questionThree">
+                <option value="">Please Choose</option>
+                <option value="Sidney Crosby">Sidney Crosby</option>
+                <option value="Mario Lemieux">Mario Lemieux</option>
+                <option value="Jaromir Jagr">Jaromir Jagr</option>
+                <option value="Martin Brodeur">Martin Brodeur</option>
+            </select>
+            <span id="questionThreeError" class="errorStyle">Please select an answer.<br></span>
+            <button type="button" class="btn btn-primary btn-sm" id="questionThreeButton">Hint</button>
+        </div>
+        <div class="form-group">
+            <label for="questionFour">4) Name the Captain of the Edmonton Oilers 1986/87 Team: </label>
+            <select class="form-control" id="questionFour">
+                <option value="">Please Choose</option>
+                <option value="Marty McSorley">Marty McSorley</option>
+                <option value="Wayne Gretzky">Wayne Gretzky</option>
+                <option value="Grant Fuhr">Grant Fuhr</option>
+                <option value="Mark Messier">Mark Messier</option>
+            </select>
+            <span id="questionFourError" class="errorStyle">Please select an answer.<br></span>
+            <button type="button" class="btn btn-primary btn-sm" id="questionFourButton">Hint</button>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <label class="form-check-label">5) What NHL team has won the most Stanley Cups? <br>
+                    <input type="radio" class="form-check-input" name="questionFive" id="Edmonton Oilers"
+                           value="Edmonton Oilers"> Edmonton Oilers
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="questionFive" id="Phoenix Coyotes"
+                           value="Phoenix Coyotes"> Phoenix Coyotes
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="questionFive" id="Montreal Canadiens"
+                           value="Montreal Canadiens"> Montreal Canadiens
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="questionFive" id="Detroit Red Wings"
+                           value="Detroit Red Wings"> Detroit Red Wings
+                </label>
+            </div>
+            <span id="questionFiveError" class="errorStyle">Please select an answer.<br></span>
+            <button type="button" class="btn btn-primary btn-sm" id="questionFiveButton">Hint</button>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <label class="form-check-label">6) Which year did the San Jose Sharks make their NHL Debut? <br>
+                    <input type="radio" class="form-check-input" name="questionSix" id="1994" value="1994"> 1994
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="questionSix" id="1991" value="1991"> 1991
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="questionSix" id="1990" value="1990"> 1990
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="questionSix" id="1992" value="1992"> 1992
+                </label>
+            </div>
+            <span id="questionSixError" class="errorStyle">Please select an answer.<br></span>
+            <button type="button" class="btn btn-primary btn-sm" id="questionSixButton">Hint</button>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <label class="form-check-label"> 7) Which of the listed teams were NOT part of the Original Six? Select
+                    all that apply. <br>
+                    <input type="checkbox" class="form-check-input" name="questionSeven[]" value="Ottawa Senators">
+                    Ottawa Senators
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="questionSeven[]" value="Toronto Maple Leafs">
+                    Toronto Maple Leafs
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="questionSeven[]" value="Vancouver Canucks">
+                    Vancouver Canucks
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="questionSeven[]" value="Boston Bruins"> Boston
+                    Bruins
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="questionSeven[]" value="None of The Above ">
+                    None of The Above
+                </label>
+            </div>
+            <span id="questionSevenError" class="errorStyle">Please select an answer.<br></span>
+            <button type="button" class="btn btn-primary btn-sm" id="questionSevenButton">Hint</button>
+        </div>
+        <button type="button" class="btn btn-success" id="submitButton" value="Submit Order">Submit Answers</button>
+        <button type="button" class="btn btn-danger" id="clearButton" value="Clear Quiz">Clear Quiz</button>
+    </form>
+    <script src="trivProcess.js"></script>
+    <script src="utility.js"></script>
+</div>
+<div id=outputDiv></div>
+</body>
+<footer><h6> Kendall Fowler CIS2286 Assignment 4</h6></footer>
+</html>

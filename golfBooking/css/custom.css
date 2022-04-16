@@ -1,0 +1,134 @@
+/*
+Name: Don Bowers
+Date:
+Purpose: Demonstrate the use of forms and functions to create a mini golf business interface.
+
+Modified By: Kendall Fowler
+Date: 04-04-2021
+Purpose: CIS 2286 Assignment 5
+*/
+#container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #D7EEEE;
+}
+
+form, input, select {
+    font-size: 90%;
+}
+
+#leftArea fieldset {
+    width: 200px;
+    background-color: #8EB83E;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+#widgetArea fieldset {
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 200px;
+    background-color: #0FA8AA;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+#headerArea {
+    padding-top: 10px;
+}
+
+legend {
+    background-color: #8EB83E;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    width: auto;
+    padding: 0 10px;
+    border: 1px solid black;
+}
+
+#totalArea {
+    float: left;
+    font-size: 90%;
+    width: 300px;
+}
+
+#totalArea input {
+    width: 20px;
+    font-size: 90%;
+}
+
+#totalArea fieldset {
+    background-color: #EE9235;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    width: auto;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+}
+
+#totalArea legend {
+    background-color: #EE9235;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    width: auto;
+    padding: 0 10px;
+    border: 1px solid black;
+}
+
+#leftArea {
+    float: left;
+}
+
+#leftArea a {
+    text-decoration: none;
+    color: black;
+    cursor: help;
+}
+
+#totalAfterTaxDiv {
+    font-weight: bolder;
+}
+
+#changeOutput {
+    display: none;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #0FA8AA;
+    border: 1px solid black;
+}
+
+#discountString {
+    font-size: 90%;
+}
+
+h3, h1 {
+    text-align: center;
+}
+
+.btn {
+    color: black;
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: #A91D21;
+    border: 1px solid black;
+}
+
+.btn-info {
+    background-color: #0FA8AA;
+    border: 1px solid black;
+}
